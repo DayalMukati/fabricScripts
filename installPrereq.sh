@@ -15,7 +15,7 @@ echo "========================================================================"
 echo "========================================================================"
 echo "Installing NodeJS"
 echo "========================================================================"
-curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt-get install nodejs  --assume-yes
 sudo apt-get install build-essential  --assume-yes
@@ -48,7 +48,8 @@ echo "========================================================================"
 echo "========================================================================"
 echo "Installing Docker Compose"
 echo "========================================================================"
-sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.15.0/docker-compose-$(uname -s)-$(uname -m)"
+# sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.15.0/docker-compose-$(uname -s)-$(uname -m)"
+sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)"
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose -v
 sudo usermod -aG docker $USER
