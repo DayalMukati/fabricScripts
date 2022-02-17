@@ -56,6 +56,11 @@ sudo usermod -aG docker $USER
 echo "========================================================================"
 echo "Installion completed"
 echo "========================================================================"
+echo "Change Docker Permission"
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
 
 echo "========================================================================"
 echo "Adding Path to Profile "
