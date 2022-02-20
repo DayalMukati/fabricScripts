@@ -4,9 +4,10 @@ echo "========================================================================"
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo rm -Rf go
-sudo curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
-sudo tar -xvf go1.6.linux-amd64.tar.gz
-sudo mv go /usr/local
+sudo wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
+sudo source ~/.profile
+sudo go version
+
 
 echo "========================================================================"
 echo "Installion completed"
